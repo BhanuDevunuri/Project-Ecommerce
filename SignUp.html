@@ -1,0 +1,35 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>SignUp</title>
+    <script src="js/validation.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product_catalog.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="SignUp.html">SignUp</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>SignUp</h1>
+        <form name="SignupForm" onsubmit="return validateForm()">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+            <button type="submit">SignUp</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Our Store. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
