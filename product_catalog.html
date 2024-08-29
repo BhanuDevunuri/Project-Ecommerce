@@ -1,4 +1,3 @@
-<!-- product_catalog.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,131 +13,184 @@
             <a href="product_catalog.html">Products</a>
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact</a>
-            <a href="SignUp.html">SignUp</a>
+            <a href="signup.html">SignUp</a>
             <a href="login.html">Login</a>
+            <a href="cart.html">Cart</a>
         </nav>
     </header>
     <div class="container">
         <h1>OUR STORE PRODUCTS</h1>
+
+        <div class="filter-sort">
+            <label for="category">Category:</label>
+            <select id="category" onchange="filterProducts()">
+                <option value="all">All</option>
+                <option value="phones">Phones</option>
+                <option value="laptops">Laptops</option>
+                <option value="desktops">Desktops</option>
+                <option value="watches">Watches</option>
+            </select>
         
-        <h2 id="phones">Phones</h2>
-        <div class="products">
-            <div class="product">
-                <img src="img/phone1.jpg" alt="Phone 1">
-                <h2>Galaxy S23 Ultra</h2>
-                <p>Samsang Galaxy S23 Ultra,smartphone ,Qualcomm Snapdragon 8,12GB,256GB,6.8inc,5G.</p>
-                <h5>Price:Rs.1,09,999/-</h5>
-            </div>
-            <div class="product">
-                <img src="img/phone2.jpg" alt="Phone 2">
-                <h2>Apple iphone 13</h2>
-                <p>Apple iPhone 13,5G,smartphone,4GB,128GB,dual sim,6.1inc,A15.</p>
-                <h5>Price:Rs.51,999/-</h5>
-            </div>
-            <div class="product">
-                <img src="img/phone3.jpg" alt="Phone 3">
-                <h2>Redmi 12 5G</h2>
-                <p>Redmi 12 5g,moonstone Silver,8GB ,256GB,50mp AI camera.</p>
-                <h5>Price:Rs.13,999/-</h5>
-            </div>
-            <div class="product">
-                <img src="img/phone4.jpg" alt="Phone 4">
-                <h2>realme NARZO 70 Pro 5G</h2>
-                <p>realme NARZO 70 Pro 5G 8GB RAM,Gsm,unlocked Phone Mediatek Dimensity 7050, 50mp.</p>
-                <h5>Price:Rs.17,999/-</h5>
+            <label for="sort">Sort By:</label>
+            <select id="sort" onchange="sortProducts()">
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name-asc">Name: A to Z</option>
+                <option value="name-desc">Name: Z to A</option>
+            </select>
+        </div>
+
+        <!-- Phones -->
+        <div id="phones-products">
+            <div class="products">
+                <h2>Phones</h2>
+                <div class="procontainer">
+                    <div class="product" data-price="109999" data-name="Samsung Galaxy S23 Ultra">
+                        <img src="img/phone1.jpg" alt="Samsung Galaxy S23 Ultra">
+                        <h2>Samsung Galaxy S23 Ultra</h2>
+                        <p>Samsung Galaxy S23 Ultra, smartphone, Qualcomm Snapdragon 8, 12GB RAM, 256GB storage, 6.8 inch, 5G.</p>
+                        <h5>Price: Rs. 1,09,999/-</h5>
+                        <button onclick="addToCart(1)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="51999" data-name="Apple iPhone 13">
+                        <img src="img/phone2.jpg" alt="Apple iPhone 13">
+                        <h2>Apple iPhone 13</h2>
+                        <p>Apple iPhone 13, 5G smartphone, 4GB RAM, 128GB storage, dual SIM, 6.1 inch, A15 Bionic chip.</p>
+                        <h5>Price: Rs. 51,999/-</h5>
+                        <button onclick="addToCart(2)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="13999" data-name="Redmi 12 5G">
+                        <img src="img/phone3.jpg" alt="Redmi 12 5G">
+                        <h2>Redmi 12 5G</h2>
+                        <p>Redmi 12 5G, Moonstone Silver, 8GB RAM, 256GB storage, 50MP AI camera.</p>
+                        <h5>Price: Rs. 13,999/-</h5>
+                        <button onclick="addToCart(3)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="17999" data-name="realme NARZO 70 Pro 5G">
+                        <img src="img/phone4.jpg" alt="realme NARZO 70 Pro 5G">
+                        <h2>realme NARZO 70 Pro 5G</h2>
+                        <p>realme NARZO 70 Pro 5G, 8GB RAM, Mediatek Dimensity 7050, 50MP camera.</p>
+                        <h5>Price: Rs. 17,999/-</h5>
+                        <button onclick="addToCart(4)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <h2 id="laptops">Laptops</h2>
-        <div class="products">
-            <div class="product">
-                <img src="img/laptop1.jpg" alt="Laptop 1">
-                <h2>MSI Modern 15</h2>
-                <p>MSI intel core i5,1235U,16RB/512GB SSD ,windows 11 Home,modern 15 B12M-277IN thin laptop.</p>
-                <h5>Price:Rs.58,999/-</h5>
-            </div>
-            <div class="product">
-                <img src="img/laptop2.jpg" alt="Laptop 2">
-                <h2>MSI Raider GE78 HX</h2>
-                <p>MSI Raider GE78 HX,Intel 14Gen.i9-14900HX,43cm QHD,32GB/2TB NVMe SSD,windows 11 Home laptop.</p>
-                <h5>Price:Rs.2,99,999/-</h5>
-            </div>
-            <div class="product">
-                <img src="img/laptop3.jpg" alt="Laptop 3">
-                <h2>DELL Insprion 3520</h2>
-                <p>Dell Insprion 3520,12th Gen,i3 Processor,8GB/512GB SSD,Integrated Graphics,39.62 cm display.</p>
-                <h5>Price:Rs.39,999/-</h5>
-            </div>
-            <div class="product">
-                <img src="img/laptop4.jpg" alt="Laptop 4">
-                <h2>ASUS Zenbook 14</h2>
-                <p>ASUS Zenbook 14 ,AMD Ryzen 5 7530U,16GB/512GB SSD,windows 11,UM3402YA-KP514WS.</p>
-                <h5>Price:Rs.50,990/-</h5>
-                
-            </div>
-        </div>
-
-        <h2 id="desktops">Desktops</h2>
-        <div class="products">
-            <div class="product">
-                <img src="img/desktop1.jpg" alt="Desktop 1">
-                <h2>ASUS AIO A3</h2>
-                <p>ASUS AIO A3 Series with Touchscreen,Intel 12th Gen Core i5 (8GB DDR4/512GB SSD/Windows 11 Home/23.8 Inch Screen/A3402WBA-TWA020WS) with MS Office</p>
-                <h5>Price:Rs.37,990/-</h5>
-            </div>
-            <div class="product">
-                <img src="img/desktop2.jpg" alt="Desktop 2">
-                <h2>Lenovo Ideacentre </h2>
-                <p>Lenovo Ideacentre Core i3 (10th Gen) (8 GB DDR4/1 TB/Windows 10 Home/21.5 Inch Screen/A340-22IWL)</p>
-                <h5>Price:Rs.29,790/-</h5>
-            </div>
-            <div class="product">
-                <img src="img/desktop3.jpg" alt="Desktop 3">
-                <h2>BitFry </h2>
-                <p>BitFry Core 15 Complete Desktop  (Core 15 3Rd Generation, 8Gb Ram/512Gb Nvme Ssd) Windows 10 Pro, Intel, Black</p>
-                <h5>Price:Rs.18,659/-</h5>
-            </div>
-            <div class="product">
-                <img src="img/desktop4.jpg" alt="Desktop 4">
-                <h2>TECH- Assemblers Z</h2>
-                <p>TECH- Assemblers Z Core i5 (8 GB DDR3/500 GB/Windows 10 Home/1 GB/17 Inch Screen/ONLINE STUDY PC)</p>
-                <h5>Price:Rs.13,999/-</h5>
-
+        <!-- Laptops -->
+        <div id="laptops-products">
+            <div class="products">
+                <h2>Laptops</h2>
+                <div class="procontainer">
+                    <div class="product" data-price="58999" data-name="MSI Modern 15">
+                        <img src="img/laptop1.jpg" alt="MSI Modern 15">
+                        <h2>MSI Modern 15</h2>
+                        <p>MSI Intel Core i5, 1235U, 16GB RAM, 512GB SSD, Windows 11 Home, Modern 15 B12M-277IN thin laptop.</p>
+                        <h5>Price: Rs. 58,999/-</h5>
+                        <button onclick="addToCart(5)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="299999" data-name="MSI Raider GE78 HX">
+                        <img src="img/laptop2.jpg" alt="MSI Raider GE78 HX">
+                        <h2>MSI Raider GE78 HX</h2>
+                        <p>MSI Raider GE78 HX, Intel 14th Gen i9-14900HX, 43cm QHD, 32GB RAM, 2TB NVMe SSD, Windows 11 Home.</p>
+                        <h5>Price: Rs. 2,99,999/-</h5>
+                        <button onclick="addToCart(6)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="39999" data-name="Dell Inspiron 3520">
+                        <img src="img/laptop3.jpg" alt="Dell Inspiron 3520">
+                        <h2>Dell Inspiron 3520</h2>
+                        <p>Dell Inspiron 3520, 12th Gen i3 Processor, 8GB RAM, 512GB SSD, Integrated Graphics, 39.62cm display.</p>
+                        <h5>Price: Rs. 39,999/-</h5>
+                        <button onclick="addToCart(7)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="50990" data-name="ASUS Zenbook 14">
+                        <img src="img/laptop4.jpg" alt="ASUS Zenbook 14">
+                        <h2>ASUS Zenbook 14</h2>
+                        <p>ASUS Zenbook 14, AMD Ryzen 5 7530U, 16GB RAM, 512GB SSD, Windows 11, UM3402YA-KP514WS.</p>
+                        <h5>Price: Rs. 50,990/-</h5>
+                        <button onclick="addToCart(8)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <h2 id="watches">watches</h2>
-        <div class="products">
-            <div class="product">
-                <img src="img/watch1.jpg" alt="watch 1">
-                <h2>SMAEL digital watch</h2>
-                <p>
+        <!-- Desktops -->
+        <div id="desktops-products">
+            <div class="products">
+                <h2>Desktops</h2>
+                <div class="procontainer">
+                    <div class="product" data-price="37990" data-name="ASUS AIO A3">
+                        <img src="img/desktop1.jpg" alt="ASUS AIO A3">
+                        <h2>ASUS AIO A3</h2>
+                        <p>ASUS AIO A3 Series with Touchscreen, Intel 12th Gen Core i5, 8GB RAM, 512GB SSD, Windows 11 Home, 23.8 Inch Screen.</p>
+                        <h5>Price: Rs. 37,990/-</h5>
+                        <button onclick="addToCart(9)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="29790" data-name="Lenovo Ideacentre">
+                        <img src="img/desktop2.jpg" alt="Lenovo Ideacentre">
+                        <h2>Lenovo Ideacentre</h2>
+                        <p>Lenovo Ideacentre Core i3 (10th Gen), 8GB RAM, 1TB HDD, Windows 10 Home, 21.5 Inch Screen.</p>
+                        <h5>Price: Rs. 29,790/-</h5>
+                        <button onclick="addToCart(10)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="42999" data-name="BitFry RTX 2060">
+                        <img src="img/desktop3.jpg" alt="BitFry RTX 2060">
+                        <h2>BitFry RTX 2060</h2>
+                        <p>BitFry RTX 2060, Intel Core i5, 16GB RAM, 240GB SSD, Windows 11, 21.5 Inch Full HD LED Monitor.</p>
+                        <h5>Price: Rs. 42,999/-</h5>
+                        <button onclick="addToCart(11)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="48990" data-name="HP All-in-One PC">
+                        <img src="img/desktop4.jpg" alt="HP All-in-One PC">
+                        <h2>HP All-in-One PC</h2>
+                        <p>HP All-in-One 12th Gen i5 Desktop, 8GB RAM, 1TB HDD, Windows 11, 60.45cm Display, White.</p>
+                        <h5>Price: Rs. 48,990/-</h5>
+                        <button onclick="addToCart(12)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                    SMAEL Sports Digital Quartz watch,2Time, Alarm, Chronograph, Date, week, led light, Shock Resistant, Waterproof</p>
-                    <h5>Price:Rs.999/-</h5>
-            </div>
-            <div class="product">
-                <img src="img/watch2.jpg" alt="watch 2 ">
-                <h2> AJO mi Smartwatch</h2>
-                <p>Smart Watch Pedometer, Sedentary Reminder, Sleep Monitor, Instant Notification, Anti-Lost, for Android & iOS - Black</p>
-                <h5>Price:Rs.1,599/-</h5>
-            </div>
-            <div class="product">
-                <img src="img/watch3.jpg" alt="watch 3">
-                <h2>Fire-Boltt</h2>
-                <p>Fire-Boltt Gladiator + 1.96"Smartwatch, Rotating Crown, 115+ Sports Modes & Bluetooth Calling, Al Voice Assistant</p>
-                <h5>Price:Rs.4,599/-</h5>
-            </div>
-            <div class="product">
-                <img src="img/watch4.jpg" alt="watch 4">
-                <h2>Fire-Boltt Phoenix Pro</h2>
-                <p>Fire-Boltt Phoenix Pro Smartwatch, 3.53 cm (1.39 inch) HD Display, Bluetooth Calling, Upto 7 Days Battery, 120+ Sports Modes, In-Built Games, IP67 Water Resistant, Al Voice Assistant Gold Black</p>
-                <h5>Price:Rs.4,550/-</h5>
+        <!-- Watches -->
+        <div id="watches-products">
+            <div class="products">
+                <h2>Watches</h2>
+                <div class="procontainer">
+                    <div class="product" data-price="24999" data-name="Apple Watch SE 2nd Gen">
+                        <img src="img/watch1.jpg" alt="Apple Watch SE 2nd Gen">
+                        <h2>Apple Watch SE 2nd Gen</h2>
+                        <p>Apple Watch SE 2nd Gen, GPS + Cellular, 40mm, Midnight Aluminium Case with Sport Band.</p>
+                        <h5>Price: Rs. 24,999/-</h5>
+                        <button onclick="addToCart(13)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="32999" data-name="Apple Watch Series 7">
+                        <img src="img/watch2.jpg" alt="Apple Watch Series 7">
+                        <h2>Apple Watch Series 7</h2>
+                        <p>Apple Watch Series 7, GPS + Cellular, 45mm, Blue Aluminium Case with Sport Band.</p>
+                        <h5>Price: Rs. 32,999/-</h5>
+                        <button onclick="addToCart(14)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="2499" data-name="Noise ColorFit Pulse 3">
+                        <img src="img/watch3.jpg" alt="Noise ColorFit Pulse 3">
+                        <h2>Noise ColorFit Pulse 3</h2>
+                        <p>Noise ColorFit Pulse 3, 1.96” Display, 100 Sports Modes, Spo2 & Heart Rate Monitoring.</p>
+                        <h5>Price: Rs. 2,499/-</h5>
+                        <button onclick="addToCart(15)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="1899" data-name="boAt Wave Call 2">
+                        <img src="img/watch4.jpg" alt="boAt Wave Call 2">
+                        <h2>boAt Wave Call 2</h2>
+                        <p>boAt Wave Call 2, Bluetooth Calling, 1.83” HD Display, Heart Rate & Spo2 Monitoring.</p>
+                        <h5>Price: Rs. 1,899/-</h5>
+                        <button onclick="addToCart(16)" class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <footer>
-        <p>&copy; 2024 Our Store. All Rights Reserved.</p>
-    </footer>
+
+    <script src="js/filter.js"></script>
+    <script src="js/sort.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 </html>
