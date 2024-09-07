@@ -3,8 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
     <title>Payment Gateway</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Inline styles for payment container */
+        .payment-container {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .payment-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .payment-container label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .payment-container input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .payment-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .payment-container button:hover {
+            background-color: #218838;
+        }
+
+        #paymentStatus {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,19 +67,19 @@
             <a href="cart.html">Cart</a>
         </nav>
     </header>
-    
+
     <div class="payment-container">
         <h2>Payment Gateway</h2>
         
         <form id="paymentForm">
             <label for="cardNumber">Card Number:</label>
-            <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter card number">
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter card number" required>
             
             <label for="expiryDate">Expiry Date:</label>
-            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
             
             <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" placeholder="CVV">
+            <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
             
             <button type="button" id="payButton">Pay Now</button>
         </form>

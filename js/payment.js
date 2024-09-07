@@ -1,12 +1,14 @@
 // payment.js
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Simulate a payment process
     function simulatePayment() {
         return new Promise((resolve) => {
             setTimeout(() => resolve('Payment Successful!'), 1000);
         });
     }
 
+    // Handle payment status display
     async function displayPaymentStatus() {
         const statusElement = document.getElementById('paymentStatus');
         if (statusElement) {
@@ -21,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Attach event listener to the payment button
     const payButton = document.getElementById('payButton');
     if (payButton) {
         payButton.addEventListener('click', async () => {

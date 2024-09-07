@@ -341,3 +341,77 @@ h1 {
     margin-top: 20px;
     font-weight: bold;
 }
+.checkout-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-top: 30px; /* Add more space above the button */
+}
+
+.checkout-btn {
+    background-color: #28a745; /* Green button color */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 12px 24px; /* Slightly larger padding for better appearance */
+    font-size: 18px; /* Larger font size */
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Add a shadow for better visual effect */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.checkout-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Enhance shadow on hover */
+}
+/* Payment Page Container */
+.payment-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    max-width: 500px; /* Set a max-width for the form */
+    margin: 40px auto; /* Center horizontally with auto margins */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add shadow for visual appeal */
+    gap: 30px;
+}
+
+.payment-container h2 {
+    margin-bottom: 20px; /* Add space below the header */
+}
+
+.payment-container label {
+    display: block;
+    margin: 10px 0 5px; /* Add margin for spacing */
+}
+
+.payment-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px; /* Increase space between inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.payment-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745; /* Green button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.payment-container button:hover {
+    background-color: #218838; /* Darker green on hover */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Enhance shadow on hover */
+}
